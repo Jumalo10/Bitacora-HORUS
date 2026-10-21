@@ -7,12 +7,12 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Bitácora">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#12303f">
+<meta name="theme-color" content="#000000">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACrElEQVR4nO3dMY7TQBiA0VlEQb1XoEMUKy6wEgUt1+EIXIeWgiNQITruQUmx7X4rb2Jvwsx7rePI0v9lLMWOc3N7dz/gMa8ufQBcL3GQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcpNeXPoDL+/3jW2169/HzSx7JtbFykMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBWvfx1j+//Nn+mg9f3x58ONdoxTi2ZPHoLqslstxp5YQydtn3f7RWHOdPd6k+Fopjr7mu08cqcew70UX6WCKOI2a5Qh/zx3HcFKfvY/I4jp7f3H1MHgfnmDmOl/lYT7x4zBwHZxIH6eb27v7knZ/4R1aux8n/jmvlIImDJA6SOEjiIImDJA6SOEhnfQl25TZe9Xjz6Vdt+vv9/ZZ3mPXGYysHSRykmeN4mdV+1nPKmDsOzjR5HEd/rCdeNsb0cYwj5zd3GWOFOMYxU5y+jLFIHGPvWa5QxlgnjrHfRBcpYywVx9hjruuUMVaLY5w33aXKGGs+vOVhxs/6vclqWTyY+cLbRk/cQ3/yfdtzWO60wnbiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIHm8NcnKQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZD+AWIZURRCGP2IAAAAAElFTkSuQmCC">
 <title>Bitácora de vuelo</title>
 <style>
-:root{--bg:#e8eef0;--card:#fff;--ink:#12303f;--mut:#5d7480;--line:#cfdadf;--acc:#12303f;--on:#fff;--hi:#e0a81c;--bar:#1f7a8c;box-sizing:border-box}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e232e;--card:#173544;--ink:#e6eef1;--mut:#94aab4;--line:#2a4757;--acc:#e0a81c;--on:#12303f;--hi:#e0a81c;--bar:#4fb3c6}}
+:root{--bg:#000;--card:#0a1424;--ink:#7fbfff;--mut:#4f86bd;--line:#1a3a63;--acc:#2f81f7;--on:#00111f;--hi:#9bd0ff;--bar:#2f81f7;color-scheme:dark;box-sizing:border-box}
+html{background:#000}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--ink);font:16px/1.4 system-ui,-apple-system,sans-serif;padding-top:env(safe-area-inset-top,0px)}
@@ -20,7 +20,7 @@ body{background:var(--bg);color:var(--ink);font:16px/1.4 system-ui,-apple-system
 main{max-width:640px;margin:0 auto;padding:14px 14px calc(84px + env(safe-area-inset-bottom,0px))}
 .view{display:none}.view.on{display:block}
 h1{font-size:15px;font-weight:600;margin:4px 0 10px;color:var(--mut)}
-.hero{background:var(--acc);color:var(--on);border-radius:14px;padding:18px 18px 14px}
+.hero{background:#0c2748;color:#bfe0ff;border-radius:14px;padding:18px 18px 14px}
 .hero .big{font-size:64px;line-height:1;font-weight:700}
 .hero small{opacity:.8;font-size:14px}
 .hero .row{display:flex;gap:24px;margin-top:12px}
@@ -56,6 +56,14 @@ nav button{flex:1;background:none;color:var(--mut);border-radius:0;padding:14px 
 nav button.on{color:var(--ink);box-shadow:inset 0 3px 0 var(--hi)}
 #toast{position:fixed;left:50%;bottom:calc(80px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--acc);color:var(--on);padding:8px 14px;border-radius:8px;display:none}
 .mut{color:var(--mut);font-size:13px}
+.hw{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px}.goal{text-align:right}.goal b{font-size:34px;display:block;line-height:1.1}
+.gb{height:6px;background:#1a3a63;border-radius:3px;margin:12px 0 4px}.gb i{display:block;height:100%;background:#7fbfff;border-radius:3px}
+.st{display:flex;flex-direction:column;gap:2px}.st b{font-size:30px}.st small{font-size:13px;font-weight:500}.st span:nth-of-type(2){font-weight:700}
+.st.ok{background:#37d67a}.st.wa{background:#f7d23e}.st.or{background:#ff9f2e}.st.rd{background:#ff5a5f}
+.st.ok,.st.wa,.st.or,.st.rd{color:#04152b;border-color:transparent}.st.ok span,.st.wa span,.st.or span,.st.rd span{color:#04152b}
+.ch{display:flex;justify-content:space-between;align-items:baseline}.ct{font-size:28px}
+.cb{height:6px;background:var(--line);border-radius:3px;margin:8px 0}.cb i{display:block;height:100%;background:var(--bar);border-radius:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--mut)}.chips b{color:var(--ink);font-size:16px}
 </style>
 </head>
 <body>
@@ -80,6 +88,7 @@ nav button.on{color:var(--ink);box-shadow:inset 0 3px 0 var(--hi)}
 const SEED=[];
 const KEY='bitacora_horus_v1';
 const MES=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+const CARGOS={PI:'Piloto instructor',P:'Piloto',PA:'Piloto alumno',PAL:'Piloto alumno básico',CP:'Copiloto',CPA:'Copiloto alumno',CRM:'Recursos de cabina',CHM:'Chequeador de misión'};
 const CON=['VFR tierra','VFR mar','IFR','Nocturno','NVG tierra','NVG mar'];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -103,6 +112,19 @@ const yr=r=>r.d.slice(0,4);
 function renderRes(){
   const tot=S.reduce((a,r)=>a+sum(r),0), tom=S.reduce((a,r)=>a+(r.to||0),0), mis=flights().filter(r=>sum(r)>0).length;
   const by=CON.map((n,i)=>[n,S.reduce((a,r)=>a+r.t[i],0)]).filter(x=>x[1]>0);
+  const cg={};S.forEach(r=>{const c=r.c||'Sin cargo';const o=cg[c]||(cg[c]={t:0,v:[0,0,0,0,0,0]});r.t.forEach((m,i)=>{o.v[i]+=m;o.t+=m})});
+  const used=Object.keys(cg).sort((a,b)=>cg[b].t-cg[a].t),cmax=Math.max(1,...used.map(c=>cg[c].t)),zero=Object.keys(CARGOS).filter(c=>!cg[c]);
+  const GOAL=3000*60,falta=Math.max(0,GOAL-tot),pct=Math.min(100,Math.round(tot/GOAL*100));
+  const T0=new Date();T0.setHours(0,0,0,0);
+  const lf=[[0,'VFR',40],[4,'NVG',40],[1,'VFR mar',180],[5,'NVG mar',180]].map(([i,n,lim])=>{
+    const f=flights().filter(r=>r.t[i]>0).sort((a,b)=>a.d<b.d?1:-1)[0];
+    if(!f)return `<div class="k st na"><span>${n} · ${lim} días</span><b class="num">—</b><span>Sin vuelos registrados</span></div>`;
+    const D=new Date(f.d+'T00:00:00'),dd=Math.max(0,Math.round((T0-D)/864e5)),ds=f.d.slice(8)+' '+MES[+f.d.slice(5,7)-1]+' '+f.d.slice(0,4);
+    let c,l;
+    if(dd>lim){const m=new Date(D);m.setMonth(m.getMonth()+18);
+      l=T0>m?'VENCIDA · Curso completo':'VENCIDA · Recobro '+(dd<=90?'A':dd<=180?'B':dd<=360?'C':'D');c='rd'}
+    else{c=dd<=lim*.5?'ok':dd<=lim*.875?'wa':'or';const r=lim-dd;l='Vigente · vence '+(r===0?'hoy':'en '+r+(r===1?' día':' días'))}
+    return `<div class="k st ${c}"><span>${n} · ${lim} días</span><b class="num">${dd} <small>días sin volar</small></b><span>${l}</span><span>Último vuelo: ${ds}</span></div>`}).join('');
   const now=new Date(),mo=[];
   for(let i=11;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);mo.push([d.getFullYear()+'-'+pad(d.getMonth()+1),MES[d.getMonth()]])}
   const mm=mo.map(([k,l])=>[l,S.filter(r=>r.d.slice(0,7)===k).reduce((a,r)=>a+sum(r),0)]);
@@ -111,8 +133,14 @@ function renderRes(){
   S.forEach(r=>{const y=yr(r);years[y]=(years[y]||0)+sum(r);if(!r.sal)mats[r.m]=(mats[r.m]||0)+sum(r)});
   const last=sorted().find(r=>!r.sal);
   $('#v-res').innerHTML=`<h1>Tiempo total de vuelo</h1>
-  <div class="hero"><div class="big num">${fmt(tot)}</div><small>horas acumuladas</small>
+  <div class="hero"><div class="hw"><div><div class="big num">${fmt(tot)}</div><small>horas acumuladas</small></div><div class="goal"><b class="num">${fmt(falta)}</b><small>${falta?'faltan para 3.000 h':'meta de 3.000 h cumplida'}</small></div></div><div class="gb"><i style="width:${pct}%"></i></div><small>${pct}% de la meta</small>
   <div class="row"><div><b class="num">${mis}</b><small>misiones</small></div><div><b class="num">${tom}</b><small>tomas</small></div>${last?`<div><b class="num">${last.d.slice(8)} ${MES[+last.d.slice(5,7)-1]}</b><small>último vuelo</small></div>`:''}</div></div>
+  <h1 style="margin-top:16px">Autonomías de vuelo</h1>
+  <div class="grid">${lf}</div>
+  <h1 style="margin-top:16px">Horas por cargo</h1>
+  ${used.map(c=>`<div class="box"><div class="ch"><div><b>${esc(c)}</b> <span class="mut">${esc(CARGOS[c]||'')}</span></div><b class="num ct">${fmt(cg[c].t)}</b></div><div class="cb"><i style="width:${Math.round(cg[c].t/cmax*100)}%"></i></div><div class="chips">${cg[c].v.map((m,i)=>m?`<span><b class="num">${fmt(m)}</b> ${CON[i]}</span>`:'').join('')}</div></div>`).join('')}
+  ${zero.length?`<p class="mut">Sin horas: ${zero.join(', ')}</p>`:''}
+  <h1 style="margin-top:16px">Total por condición</h1>
   <div class="grid">${by.map(([n,m])=>`<div class="k"><b class="num">${fmt(m)}</b><span>${n}</span></div>`).join('')}</div>
   <div class="box"><b>Últimos 12 meses</b><div class="bars">${mm.map(([l,m])=>`<div title="${fmt(m)}"><i style="height:${Math.round(m/mx*80)}px"></i>${l[0]}</div>`).join('')}</div></div>
   <div class="box"><b>Por año</b><table>${Object.keys(years).sort().reverse().map(y=>`<tr><td>${y}</td><td class="num">${fmt(years[y])}</td></tr>`).join('')}</table></div>
@@ -156,7 +184,7 @@ function edit(id){
   const dl=(id,arr)=>`<datalist id="${id}">${[...new Set(arr.filter(Boolean))].sort().map(x=>`<option value="${esc(x)}">`).join('')}</datalist>`;
   $('#v-new').innerHTML=`<h1>${id?'Editar vuelo':'Registrar vuelo'}</h1>
   <label>Fecha</label><input id="fd" type="date" value="${r.d}">
-  <div class="f"><div><label>Aeronave</label><input id="fa" value="${esc(r.a)}"></div><div><label>Matrícula</label><input id="fma" list="dm" value="${esc(r.m)}"></div><div><label>Cargo</label><input id="fc" list="dc" value="${esc(r.c)}"></div></div>
+  <div class="f"><div><label>Aeronave</label><input id="fa" value="${esc(r.a)}"></div><div><label>Matrícula</label><input id="fma" list="dm" value="${esc(r.m)}"></div><div><label>Cargo</label><select id="fc">${[...new Set([...Object.keys(CARGOS),r.c].filter(Boolean))].map(c=>`<option value="${esc(c)}"${c===r.c?' selected':''}>${esc(c)}${CARGOS[c]?' · '+CARGOS[c]:''}</option>`).join('')}</select></div></div>
   <label>Misión</label><input id="fmi" list="dmi" value="${esc(r.mi)}">
   <label>Ruta</label><input id="fr" value="${esc(r.r)}">
   <label>Tiempos (h:mm, por ejemplo 1:30)</label>
@@ -164,7 +192,7 @@ function edit(id){
   <div id="tot" class="num"></div>
   <div class="f"><div><label>Tomas</label><input id="fto" type="number" min="0" value="${r.to||0}"></div></div>
   <label>Observaciones</label><textarea id="fo" rows="2">${esc(r.o)}</textarea>
-  ${dl('dm',S.map(x=>x.m))}${dl('dc',S.map(x=>x.c))}${dl('dmi',S.map(x=>x.mi))}
+  ${dl('dm',S.map(x=>x.m))}${dl('dmi',S.map(x=>x.mi))}
   <div class="tools"><button id="sv">Guardar</button><button class="alt" id="cn">Cancelar</button>${id?'<button class="del" id="rm">Eliminar</button>':''}</div>`;
   const upd=()=>{$('#tot').textContent=fmt([...document.querySelectorAll('.ft')].reduce((a,e)=>a+parseT(e.value),0))+' h'};
   document.querySelectorAll('.ft').forEach(e=>e.oninput=upd);upd();
